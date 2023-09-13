@@ -14,8 +14,6 @@ read -sp "Enter your git pass: " GIT_PASSWORD
 RED="\e[31m"
 GREEN="\e[32m"
 
-dos2unix repos.txt
-
 cat repos.txt | while read REPO; do
 
     echo "... Processing $REPO ..."
