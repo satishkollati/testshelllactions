@@ -1,5 +1,5 @@
 #!/bin/bash
-#set -x
+set -x
 
 #*********** vars ************************************
 BIT_USERNAME="satishkollati"
@@ -7,7 +7,7 @@ WORKSPACE='codepipeline9'
 projectkey='BB2GHMIG'
 bitbucket_pass="ATBBk5MJVVd7eTPajnKFCC3zW5Vg3B3BCDE6"
 GIT_USERNAME="satishkollati"
-GIT_PASSWORD="hp_PhHgM3kgulIDluqRPZ4OA6bYBYrzKi1Sk84q "
+GIT_PASSWORD="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"
 #*********** vars *************************************
 #read -sp "Enter your bitbucket pass: " bitbucket_pass
 #read -sp "Enter your git pass: " GIT_PASSWORD
@@ -20,10 +20,10 @@ cat repos.txt | while read REPO; do
     echo
 
     # Setting a mirror of source repository
-    # git clone --mirror git@bitbucket.org:$WORKSPACE/$REPO.git 
     git clone https://satishkollati@bitbucket.org/$WORKSPACE/$REPO.git
+
+    #git clone --mirror git@bitbucket.org:$WORKSPACE/$REPO.git
     cd $REPO
-    echo
     echo "... $REPO cloned, now creating on github ..."
     echo
 
@@ -36,8 +36,8 @@ cat repos.txt | while read REPO; do
 
     # Pushing mirror to github repository
     #git push --mirror git@github.com:$GIT_USERNAME/$REPO.git
-    git push --mirror https://github.com/$GIT_USERNAME/$REPO.git
-
+    #git push --mirror https://github.com/$GIT_USERNAME/$REPO.git
+    git push https://satishkollati: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@github.com/satishkollati/$REPO.git
     cd ..
     # Remote local repo
     rm -rf $REPO
@@ -48,4 +48,3 @@ cat repos.txt | while read REPO; do
     fi
     echo -e "${GREEN} $REPO Repository Migration is completed successfully!"
 done
-
