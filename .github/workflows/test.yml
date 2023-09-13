@@ -21,7 +21,7 @@ jobs:
       - name: 'Setup jq'
         uses: dcarbone/install-jq-action@v1.0.1
 
-      - name: run the script.
+      - name: run the script..
         run: |
             chmod +x ./migration.sh
             ./migration.sh
