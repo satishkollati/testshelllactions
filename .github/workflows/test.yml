@@ -1,7 +1,7 @@
 name: test_github_actions
 on:
  workflow_dispatch:  
- push:
+ 
  
 jobs:
    run_shell:
