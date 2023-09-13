@@ -22,7 +22,7 @@ cat repos.txt | while read REPO; do
     # Setting a mirror of source repository
     # git clone --mirror git@bitbucket.org:$WORKSPACE/$REPO.git 
     git clone https://satishkollati@bitbucket.org/$WORKSPACE/$REPO.git
-    cd $REPO.git
+    cd $REPO
     echo
     echo "... $REPO cloned, now creating on github ..."
     echo
@@ -40,7 +40,7 @@ cat repos.txt | while read REPO; do
 
     cd ..
     # Remote local repo
-    rm -rf $REPO.git
+    rm -rf $REPO
 
     if [ $? -ne 0 ]; then
         echo "migration failed"
