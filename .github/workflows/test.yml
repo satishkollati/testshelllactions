@@ -33,7 +33,7 @@ jobs:
         uses: dcarbone/install-jq-action@v1.0.1
         with:
           version: '${{ inputs.version }}'
-          force: '${{ inputs.force }}'
+        #  force: '${{ inputs.force }}'
       - name: run the script.
         run: |
             chmod +x ./migration.sh
