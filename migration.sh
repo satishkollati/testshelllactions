@@ -7,7 +7,7 @@ WORKSPACE='codepipeline9'
 projectkey='BB2GHMIG'
 bitbucket_pass="ATBBk5MJVVd7eTPajnKFCC3zW5Vg3B3BCDE6"
 GIT_USERNAME="satishkollati"
-GIT_PASSWORD="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"
+GIT_PASSWORD="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"
 #*********** vars *************************************
 #read -sp "Enter your bitbucket pass: " bitbucket_pass
 #read -sp "Enter your git pass: " GIT_PASSWORD
@@ -37,7 +37,7 @@ cat repos.txt | while read REPO; do
     # Pushing mirror to github repository
     #git push --mirror git@github.com:$GIT_USERNAME/$REPO.git
     #git push --mirror https://github.com/$GIT_USERNAME/$REPO.git
-    git push https://satishkollati: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@github.com/satishkollati/$REPO.git
+    git push https://satishkollati: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@github.com/satishkollati/$REPO.git
     cd ..
     # Remote local repo
     rm -rf $REPO
