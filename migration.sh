@@ -37,7 +37,7 @@ cat repos.txt | while read REPO; do
     # Pushing mirror to github repository
     #git push --mirror git@github.com:$GIT_USERNAME/$REPO.git
     #git push --mirror https://github.com/$GIT_USERNAME/$REPO.git
-    git push https://satishkollati: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@github.com/satishkollati/$REPO.git
+    git push https://satishkollati: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@github.com/satishkollati/$REPO.git
     cd ..
     # Remote local repo
     rm -rf $REPO
