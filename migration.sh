@@ -9,8 +9,8 @@ bitbucket_pass="ATBBk5MJVVd7eTPajnKFCC3zW5Vg3B3BCDE6"
 GIT_USERNAME="satishkollati"
 GIT_PASSWORD="hp_PhHgM3kgulIDluqRPZ4OA6bYBYrzKi1Sk84q "
 #*********** vars *************************************
-read -sp "Enter your bitbucket pass: " bitbucket_pass
-read -sp "Enter your git pass: " GIT_PASSWORD
+#read -sp "Enter your bitbucket pass: " bitbucket_pass
+#read -sp "Enter your git pass: " GIT_PASSWORD
 RED="\e[31m"
 GREEN="\e[32m"
 
