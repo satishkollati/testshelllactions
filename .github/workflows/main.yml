@@ -20,6 +20,9 @@ jobs:
     steps:
       - name: 'Setup jq'
         uses: dcarbone/install-jq-action@v1.0.1
+        with:
+          version: '${{ inputs.version }}'
+          force: '${{ inputs.force }}'
       
       - name: 'Check jq'
         run: |
