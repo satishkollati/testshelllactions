@@ -10,7 +10,7 @@ jobs:
     steps:
      - name: create repo using shell on git
        run: |
-         curl -u {{secrets.USERNAME}}:{{secrets.TOKEN}} https://api.github.com/user/repos -d '{"name": "HELLOWORLD", "private": true}'    
+         curl -u ${{secrets.USERNAME}}:${{secrets.TOKEN}} https://api.github.com/user/repos -d '{"name": "HELLOWORLD", "private": true}'    
        shell: bash
 
 
