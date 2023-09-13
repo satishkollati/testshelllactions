@@ -1,4 +1,4 @@
-name: "Setup env"
+name: "Setup jq Example - Linux"
 
 on:
  push:
@@ -7,11 +7,10 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Setup jq'
-        uses: dcarbone/install-jq-action@v1.0.1
-        with:
-         version: 1.6
-      - name: 'Check jq'
-        run: |
-          which jq
-          jq --version 
+     - name: create repo using shell on git
+       run: |
+         curl -u {{secrets.USERNAME}}:{{secrets.TOKEN}} https://api.github.com/user/repos -d '{"name": "HELLOWORLD", "private": true}'    
+       shell: bash
+
+
+        
