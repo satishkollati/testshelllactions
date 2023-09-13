@@ -10,7 +10,9 @@ jobs:
      - name: get the code
        uses: actions/checkout@v3   
      - name: run the script.
-       run: ./file.sh
+       run: |
+        chmod +x ./file.sh
+        ./file.sh
        shell: bash
            
           
