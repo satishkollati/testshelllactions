@@ -22,7 +22,8 @@ cat repos.txt | while read REPO; do
     echo
 
     # Setting a mirror of source repository
-    git clone --mirror git@bitbucket.org:$WORKSPACE/$REPO.git 
+    # git clone --mirror git@bitbucket.org:$WORKSPACE/$REPO.git 
+    git clone https://satishkollati@bitbucket.org/$WORKSPACE/$REPO.git
     cd $REPO.git
     echo
     echo "... $REPO cloned, now creating on github ..."
