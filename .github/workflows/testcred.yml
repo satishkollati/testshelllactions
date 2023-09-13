@@ -1,0 +1,17 @@
+name: "Setup env"
+
+on:
+ push:
+
+jobs:
+  example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Setup jq'
+        uses: dcarbone/install-jq-action@v1.0.1
+        with:
+         version: 1.6
+      - name: 'Check jq'
+        run: |
+          which jq
+          jq --version 
