@@ -1,2 +1,27 @@
-test
-testmigration
+Grant Write Access
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  grant-access:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+    - name: Grant write access
+      run: |
+        REPO_OWNER=other_username
+        REPO_NAME=other_repo
+        COLLABORATOR_USERNAME=collaborator_username
+        
+        API_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/collaborators/$COLLABORATOR_USERNAME"
+        
+        curl -X PUT \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          $API_URL
